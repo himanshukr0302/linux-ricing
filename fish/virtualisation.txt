@@ -1,0 +1,13 @@
+# This file contains the virtual environment essentials needed to setup the kvm and virtmanger on cachy os
+
+# step  1
+sudo pacman -S --needed qemu-desktop virt-manager virt-viewer vde2 bridge-utils openbsd-netcat dmidecode iptables-nft qemu-img edk2-ovmf libosinfo swtpm
+
+
+# step  2 - essential packages for windows vms 
+paru -S virtio-win
+
+# step  3
+sudo virt-host-validate qemu
+
+
