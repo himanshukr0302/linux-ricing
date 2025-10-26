@@ -30,6 +30,9 @@ alias v='nvim'
 alias vim='nvim'
 alias cat='bat'
 
+# typing practice
+alias typing="tukai"
+
 alias anime='fastanime --icons --preview --fzf anilist'
 
 alias ew='nvim ~/.config/wezterm/wezterm.lua'
@@ -38,12 +41,13 @@ alias ed='nvim ~/.config/fish/config.fish'
 alias done='source ~/.config/fish/config.fish'
 
 # clearing history
-alias chist='rm ~/.local/share/fish/fish_history'
+alias chist='rm ~/.local/share/fish/fish_history;'
 
 # enabling vim mode 
 set -g fish_key_bindings fish_vi_key_bindings
 
-# activating conda for ml and dl
+set -x LIBVIRT_DEFAULT_URI qemu:///system
 
-alias startml='source ~/miniconda3/etc/fish/conf.d/conda.fish; cd ~/Documents/machine-learning; conda activate ml'
-alias notebook='jupyter notebook'
+# initializing conda 
+alias ac='source ~/miniconda3/etc/fish/conf.d/conda.fish'
+starship init fish | source
